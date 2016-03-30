@@ -35,5 +35,10 @@ public class movement : MonoBehaviour {
         {
             rb.velocity += walkSpeed * Vector2.right;
         }
+        if (Input.GetKeyDown("0"))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
     }
 }
