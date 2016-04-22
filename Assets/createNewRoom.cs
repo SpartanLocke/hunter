@@ -16,10 +16,9 @@ public class createNewRoom : MonoBehaviour {
 	    
 	}
 
-    void OnCollisionEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        gameManager.instance.roomId = idNum;
-    }
-             
+        if (other.name =="player") gameManager.instance.roomId = idNum;
+    }   
 
-    }
+}
