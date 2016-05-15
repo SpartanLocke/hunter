@@ -9,8 +9,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 480834}
   - 212: {fileID: 21273636}
-  - 61: {fileID: 6195238}
   - 50: {fileID: 5030698}
+  - 60: {fileID: 6028444}
+  - 61: {fileID: 6152688}
   m_Layer: 0
   m_Name: tree
   m_TagString: remove
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.73, y: -4.37, z: 0}
+  m_LocalPosition: {x: -2.9986503, y: -1.04983, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,8 +48,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &6195238
-BoxCollider2D:
+--- !u!60 &6028444
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -59,8 +60,29 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.005031824, y: 0.26999998}
+      - {x: -0.20625985, y: -0.11559492}
+      - {x: -0.06896281, y: -0.17533249}
+      - {x: -0.06989026, y: -0.26999998}
+      - {x: 0.06030917, y: -0.27041203}
+      - {x: 0.061067104, y: -0.17832994}
+      - {x: 0.19896281, y: -0.11681515}
+--- !u!61 &6152688
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.0013822317, y: -0.13790548}
   serializedVersion: 2
-  m_Size: {x: 0.45, y: 0.58}
+  m_Size: {x: 0.2674867, y: 0.2641893}
 --- !u!212 &21273636
 SpriteRenderer:
   m_ObjectHideFlags: 1

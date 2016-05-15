@@ -24,12 +24,23 @@ public class projectile : MonoBehaviour {
 
     public void changeDirection(Vector2 dir)
     {
+        dir.Normalize();
+        float ang = Mathf.Acos(Vector2.Dot(dir, Vector2.up)) * (180f/Mathf.PI);
+        ang *= dir.x > 0 ? -1 : 1;
+        transform.Rotate(Vector3.forward, ang);
         direction = dir;
         rb.velocity = speed * direction;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        if (coll.collider.gameObject.name == "sapling(Clone)")
+        {
+            coll.collider.gameObject.GetComponent<SpriteRenderer>().sprite = gameManager.instance.stumpSpr;
+            coll.collider.gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            tree sap = coll.collider.gameObject.GetComponent<tree>();
+            gameManager.instance.cutDown(sap.index);
+        }
         Destroy(this.gameObject);
     }
     

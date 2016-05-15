@@ -13,6 +13,7 @@ public class deer : MonoBehaviour {
 	void Update () {
 	    if (health < 1)
         {
+            gameManager.instance.deerKill();
             Destroy(this.gameObject);
         }
 	}
